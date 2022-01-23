@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "../../../interfaces";
+import { Logo } from "../../core/Logo/Logo";
 import { Menu } from "../../core/Menu/Menu";
 import './styles.scss';
 
@@ -27,6 +28,7 @@ const MENU_ITEMS: Link[] = [
 export const Header = () => {
   return (
     <header className="l-header">
+      <Logo />
       <Menu items={MENU_ITEMS} />
     </header>
   )

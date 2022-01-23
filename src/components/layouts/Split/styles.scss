@@ -1,0 +1,30 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Split
+
+.l-split {
+  padding: $spacing-9 0;
+
+  @include bp-tablet-lg {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+.l-split__left,
+.l-split__right {
+  flex: 1;
+}
+
+.l-split__left {
+  padding-right: $spacing-3;
+}
+
+.l-split__right {
+  padding-left: $spacing-3;
+}

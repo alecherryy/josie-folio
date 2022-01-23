@@ -5,5 +5,13 @@
 // Header
 
 .l-header {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
   padding: $spacing-3 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

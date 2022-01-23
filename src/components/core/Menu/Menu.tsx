@@ -17,7 +17,7 @@ export const Menu = ({ modifierClasses = '', items}: Props) => {
     ].join(' ').trim()}>
       <ul className="c-menu__menu">
         {items.map((item: Link) => (
-          <li className="c-menu__item">
+          <li className="c-menu__item" key={item.text}>
             <NavLink className="c-menu__link" to={item.path}>{item.text}</NavLink>
           </li>
         ))}

@@ -8,26 +8,60 @@
   @include button-clear();
 
   background-color: $orange;
-  border-radius: 100px;
   color: $white;
   display: inline-block;
   font-weight: 700;
   line-height: $line-height-loose;
-  min-width: rem(150px);
-  padding: $spacing-1 $spacing-2;
-  text-align: center;
-  text-decoration: none;
+  width: rem(300px);
+  position: relative;
+  padding: $spacing-2;
+  text-align: left;
   transition: all 0.4s cubic-bezier(0.5, 0.25, 0, 1);
+  z-index: 1;
 
-  &:hover,
-  &:focus {
-      background-color: $orange-1;
+  &:before,
+  &:after {
+    @include svg-background(icon-arrow-right);
+
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7px 15px;
+    content: '';
+    height: 15px;
+    opacity: 1;
+    position: absolute;
+    top: calc((100% - 15px) / 2);
+    transform: translateX(0);
+    width: 7px;
+    z-index: 2;
+  }
+
+  &::before {
+    right: $spacing-2;
+  }
+
+  &::after {
+    right: calc($spacing-2 + 7px);
+  }
+
+  &:hover {
+    background-color: $orange-1;
+
+    &::before,
+    &::after {
+      animation: 1s cubic-bezier(0.5, 0.25, 0, 1) 0s 1 running fade-and-slide;
+    }
+
+    &::after {
+      animation-delay: 0.2s;
+    }
   }
 
   &:disabled {
     opacity: 0.15;
     pointer-events: none;
-    background-color: $mild-grey !important;
+    background-color: $grey-2 !important;
   }
 
   @include bp-tablet {
@@ -37,5 +71,26 @@
 
   & + .c-button {
     margin-left: $spacing-2;
+  }
+}
+
+@keyframes fade-and-slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(rem(300px));
+    opacity: 0;
+  }
+
+  75% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
