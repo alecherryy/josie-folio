@@ -7,6 +7,13 @@ import Shapes from "../../../images/shape-groups.svg";
  */
 export const Home = () => {
   return (
-    <Split left={<div className="u-pl-9"><img src={Shapes} alt="shape cluster" /></div>} right={<Content />} />
+    <Split
+      left={
+        <div className="u-pl-9">
+          <img src={Shapes} alt="shape cluster" />
+        </div>
+      }
+      right={<Content />}
+    />
   )
 }
