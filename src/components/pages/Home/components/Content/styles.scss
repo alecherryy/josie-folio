@@ -6,6 +6,7 @@
 
 .c-content {
   color: $grey-2;
+  width: 100%;
 
   @include bp-max-tablet {
     display: flex;

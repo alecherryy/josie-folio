@@ -40,7 +40,7 @@ export const MobileMenu = ({ modifierClasses = '', items }: Props) => {
       modifierClasses
     ].join(' ').trim()}>
       <button onClick={(e: any) => toggleMenuDisplay(e)} className="c-mobile-menu__btn">{open ? 'Close' : 'Menu'}</button>
-      <ul className="c-mobile-menu__menu" style={{display: 'none', opacity: '0'}}>
+      <ul className="c-mobile-menu__menu" style={{ display: 'none', opacity: '0' }}>
         {items.map((item: Link, index: number) => (
           <li className="c-mobile-menu__item" key={index}>
             <NavLink
