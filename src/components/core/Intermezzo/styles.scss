@@ -1,0 +1,24 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Logo
+
+.c-intermezzo {
+  align-items: center;
+  background-color: $black-1;
+  display: flex;
+  color: $grey-3;
+  justify-content: flex-end;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  padding: $spacing-6;
+  top: 0;
+  width: 100vw;
+  z-index: 9;
+}
+
+.c-intermezzo__inner {
+  flex-direction: column;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "../../../interfaces";
 import { fadeIn, fadeOut } from "../../../utils/utils";
@@ -14,7 +14,7 @@ type Props = {
 export const MobileMenu = ({ modifierClasses = '', items }: Props) => {
   const [open, setOpen] = useState(false);
 
-  const getActiveClass = (navData: any, index: number) => {
+  const getActiveClass = (navData: any) => {
     return navData.isActive ? 'c-mobile-menu__link is-active' : 'c-mobile-menu__link';
   }
 
@@ -45,7 +45,7 @@ export const MobileMenu = ({ modifierClasses = '', items }: Props) => {
           <li className="c-mobile-menu__item" key={index}>
             <NavLink
               onClick={(e: any) => closeMenu(e)}
-              className={(navData: any) => getActiveClass(navData, index)}
+              className={(navData: any) => getActiveClass(navData)}
               to={item.path}
             >
               {item.text}

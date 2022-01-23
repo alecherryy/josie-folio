@@ -2,8 +2,22 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 import { Header } from './components/layouts/Header/Header';
 import { RouteSwitch } from './components/core/RouteSwitch/RouteSwitch';
+import { Intermezzo } from './components/core/Intermezzo/Intermezzo';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsReady(true);
+    }, 2500);
+  }, [setIsReady])
+
+  if (!isReady) {
+    return <Intermezzo title={`josie — portfolio`} />;
+  }
+
   return (
     <BrowserRouter>
       <Header />
