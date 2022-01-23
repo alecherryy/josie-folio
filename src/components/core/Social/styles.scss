@@ -1,0 +1,73 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Social
+
+.c-social {
+  @include list-inline();
+}
+
+.c-social__item {
+  margin: 0;
+  padding-right: $spacing-3 !important;
+}
+
+.c-social__link {
+  @include image-replace(rem(25px), rem(25px));
+
+  position: relative;
+
+  &::before,
+  &::after {
+    @include image-replace(rem(25px), rem(25px));
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &::before {
+    opacity: 1;
+  }
+
+  &::after {
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.c-social__link--twitter {
+    &::before {
+      @include svg-background(icon-social-twitter);
+    }
+
+    &::after {
+      @include svg-background(icon-social-twitter-hover);
+    }
+  }
+
+  &.c-social__link--github {
+    &::before {
+      @include svg-background(icon-social-github);
+    }
+
+    &::after {
+      @include svg-background(icon-social-github-hover);
+    }
+  }
+}

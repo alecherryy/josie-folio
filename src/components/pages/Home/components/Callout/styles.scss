@@ -1,0 +1,30 @@
+@import '../../../../../scss/variables';
+@import '../../../../../scss/utils';
+
+// @file
+// Callout
+
+.c-callout {
+  align-items: center;
+  background-color: $black-1;
+  display: flex;
+  color: $grey-3;
+  justify-content: space-between;
+  padding: $spacing-4;
+  position: relative;
+
+  &::after {
+    @include svg-background(shape-1);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: rem(223px) rem(28px);
+    bottom: calc(rem(14px) * -1);
+    content: '';
+    display: block;
+    height: rem(28px);
+    left: calc(#{rem(223px)} / 2 * -1);
+    position: absolute;
+    width: rem(223px);
+  }
+}
