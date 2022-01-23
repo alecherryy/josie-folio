@@ -1,0 +1,41 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Button
+
+.c-button {
+  @include button-clear();
+
+  background-color: $orange;
+  border-radius: 100px;
+  color: $white;
+  display: inline-block;
+  font-weight: 700;
+  line-height: $line-height-loose;
+  min-width: rem(150px);
+  padding: $spacing-1 $spacing-2;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.5, 0.25, 0, 1);
+
+  &:hover,
+  &:focus {
+      background-color: $orange-1;
+  }
+
+  &:disabled {
+    opacity: 0.15;
+    pointer-events: none;
+    background-color: $mild-grey !important;
+  }
+
+  @include bp-tablet {
+    padding-left: $spacing-3;
+    padding-right: $spacing-3;
+  }
+
+  & + .c-button {
+    margin-left: $spacing-2;
+  }
+}

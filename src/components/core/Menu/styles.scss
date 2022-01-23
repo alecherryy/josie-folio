@@ -1,0 +1,29 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Menu
+
+.c-menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-menu__menu {
+  @include list-inline();
+
+  margin: 0;
+  padding-left: $spacing-6;
+}
+
+.c-menu__item {
+  margin: 0;
+  padding-left: $spacing-6 !important;
+}
+
+.c-menu__link {
+  font-size: $font-size-sm;
+  color: $grey-3;
+  text-decoration: none;
+}

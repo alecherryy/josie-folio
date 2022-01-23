@@ -3,31 +3,31 @@
 
 // Style for eyebrows and/or labels
 @mixin eyebrow() {
-    color: $grey-3;
-    display: block;
-    font-size: $font-size-sm;
-    font-weight: 700;
-    margin: 0 0 $spacing-1;
-    text-transform: uppercase;
+  color: $grey-3;
+  display: block;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  margin: 0 0 $spacing-1;
+  text-transform: uppercase;
 }
 
 // Remove button default styles
 @mixin button-clear() {
-    &[type='button'] {
-        appearance: none;
-    }
+  &[type='button'] {
+    appearance: none;
+  }
 
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 }
 
 // LISTS MIXINS
