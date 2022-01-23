@@ -6,5 +6,9 @@
 
 .c-logo {
   display: inline-block;
-  margin-left: $spacing-6;
+  margin-left: $spacing-2;
+
+  @include bp-tablet {
+    margin-left: $spacing-6;
+  }
 }

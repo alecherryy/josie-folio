@@ -213,3 +213,9 @@ $units: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 .u-pb-0 {
   padding-bottom: 0;
 }
+
+.u-hidden-mobile {
+  @include bp-max-tablet {
+    display: none;
+  }
+}

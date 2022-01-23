@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <Split
       left={
-        <div className="u-pl-9">
+        <div className="u-pl-9 u-hidden-mobile">
           <img src={Shapes} alt="shape cluster" />
         </div>
       }

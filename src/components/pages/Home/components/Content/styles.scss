@@ -6,4 +6,11 @@
 
 .c-content {
   color: $grey-2;
+
+  @include bp-max-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
 }
