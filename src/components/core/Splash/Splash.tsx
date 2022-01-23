@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { YEAR } from '../../../ constants/vars';
 import { fadeOut } from '../../../utils/utils';
 import { Fade } from "react-awesome-reveal";
 import './styles.scss';
@@ -26,7 +25,7 @@ export const Splash = ({ title }: Props) => {
       <div className="c-intermezzo__inner">
         <Fade delay={500} direction="up" cascade>
           <h5>{title}</h5>
-          <p className="u-txt-sm">folio {YEAR}</p>
+          <p className="u-txt-sm">bitcoing core developer</p>
         </Fade>
       </div>
     </div>
