@@ -1,0 +1,215 @@
+// @file
+// HTML elements styles
+
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+  line-height: $line-height-normal;
+  min-height: 100%;
+  text-size-adjust: 100%;
+}
+
+// adjust font size based on resolution
+@media (max-resolution: 180dpi) {
+  html {
+    font-size: calc(
+      10px * 0.9 + (18 * 0.9 - 10 * 0.9) * ((100vmin - 130px) / (1600 - 130))
+    );
+  }
+}
+
+@media (resolution: 96dpi) {
+  html {
+    font-size: calc(
+      12px * 0.8 + (18 * 0.8 - 12 * 0.8) * ((100vmin - 130px) / (1600 - 130))
+    );
+  }
+}
+
+body {
+  background-color: $black;
+  color: $white;
+  font-family: $base-font-family;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  word-wrap: break-word;
+}
+
+// headings placeholder styles
+%hN {
+  font-weight: 700;
+  color: $white;
+  hyphens: none;
+  line-height: $line-height-normal;
+  margin: 0 0 $spacing-1;
+  text-rendering: optimizeLegibility;
+
+  @media print {
+    & {
+      orphans: 3;
+      page-break-after: avoid;
+      widows: 3;
+
+      &::after {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+h1,
+%h1 {
+  @extend %hN;
+  font-size: $font-size-h2;
+
+  @include bp-tablet-lg {
+    font-size: $font-size-h1;
+  }
+}
+
+h2,
+%h2 {
+  @extend %hN;
+  font-size: $font-size-h3;
+
+  @include bp-tablet-lg {
+    font-size: $font-size-h2;
+  }
+}
+
+h3,
+%h3 {
+  @extend %hN;
+  font-size: $font-size-lg;
+
+  @include bp-tablet-lg {
+    font-size: $font-size-h3;
+  }
+}
+
+h4,
+%h4 {
+  @extend %hN;
+  font-size: $font-size-h5;
+
+  @include bp-tablet-lg {
+    font-size: $font-size-h4;
+  }
+}
+
+h5,
+%h5 {
+  @extend %hN;
+  font-size: $font-size-h6;
+
+  @include bp-tablet-lg {
+      font-size: $font-size-h5;
+  }
+}
+
+h6,
+%h6 {
+  @extend %hN;
+  font-size: $font-size-h6;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1rem;
+
+  @media print {
+    & {
+      orphans: 3;
+      widows: 3;
+    }
+  }
+}
+
+hr {
+    border: solid 1px $grey-3;
+}
+
+a {
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+::selection,
+mark {
+  background: $white;
+  color: $black;
+}
+
+// main {}
+
+// section {}
+
+label {
+  color: $grey-2;
+  font-size: $font-size-sm;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  background-color: $white !important;
+  border: solid 1px $grey-3 !important;
+  border-radius: 5px;
+  box-shadow: none;
+  color: $black;
+  height: rem(44px);
+  padding: 0 $spacing-1;
+  transition: all 0.2s ease-in;
+
+  &:focus {
+    border-color: $grey-1 !important;
+    outline: none;
+  }
+
+  ::placeholder {
+    color: $grey-4;
+  }
+
+  &:disabled {
+    background-color: $grey-3;
+    border-color: $black;
+    color: $black;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  &[type='checkbox'],
+  &[type='radio'] {
+    ~ svg {
+      background-color: transparent !important;
+      color: $grey-2;
+    }
+
+    &:checked ~ svg {
+      color: $grey-3;
+    }
+  }
+}

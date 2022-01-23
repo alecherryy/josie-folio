@@ -1,0 +1,15 @@
+@use "sass:math";
+// @file
+// Functions
+
+// Convert pixels to rems
+@function rem($size) {
+
+    @return math.div($size, 16px) * 1rem;
+}
+
+// Convert numeric value to rems
+@function spacing($size) {
+
+    @return ($size * math.div(10px, 16px)) * 1rem;
+}

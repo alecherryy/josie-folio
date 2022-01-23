@@ -1,0 +1,28 @@
+// @file
+// Breakpoints
+$screen-mobile: rem(320px); // extra-small devices
+$screen-mobile-lg: rem(480px); // small devices
+$screen-tablet: rem(640px); // tablet
+$screen-tablet-lg: rem(880px); // large tablet
+$screen-desktop: rem(1024px); // desktop
+$screen-desktop-lg: rem(1420px); // large desktop
+$screen-widescreen: rem(1700px); // widescreen desktop. 15' and up
+
+
+// Progressive Enhacement - Mobile first
+@mixin bp-mobile { @media (min-width: #{$screen-mobile}) {@content;} }
+@mixin bp-mobile-lg { @media (min-width: #{$screen-mobile-lg}) {@content;} }
+@mixin bp-tablet { @media (min-width: #{$screen-tablet}) {@content;} }
+@mixin bp-tablet-lg { @media (min-width: #{$screen-tablet-lg}) {@content;} }
+@mixin bp-desktop { @media (min-width: #{$screen-desktop}) {@content;} }
+@mixin bp-desktop-lg { @media (min-width: #{$screen-desktop-lg}) {@content;} }
+@mixin bp-widescreen { @media (min-width: #{$screen-widescreen}) {@content;} }
+
+// Graceful Degradation - Desktop first
+@mixin bp-max-mobile { @media (max-width: #{$screen-mobile}) {@content;} }
+@mixin bp-max-mobile-lg { @media (max-width: #{$screen-mobile-lg}) {@content;} }
+@mixin bp-max-tablet { @media (max-width: #{$screen-tablet}) {@content;} }
+@mixin bp-max-tablet-lg { @media (max-width: #{$screen-tablet-lg}) {@content;} }
+@mixin bp-max-desktop { @media (max-width: #{$screen-desktop}) {@content;} }
+@mixin bp-max-desktop-lg { @media (max-width: #{$screen-desktop-lg}) {@content;} }
+@mixin bp-max-widescreen { @media (max-width: #{$screen-widescreen}) {@content;} }
