@@ -8,7 +8,7 @@
   display: inline-block;
   margin-left: $spacing-2;
 
-  @include bp-tablet {
+  @include bp-tablet-lg {
     margin-left: $spacing-6;
   }
 }

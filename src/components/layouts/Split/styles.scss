@@ -5,13 +5,14 @@
 // Split
 
 .l-split {
-  padding: $spacing-9 0;
+  height: 100vh;
+  padding: $spacing-6 0;
 
-  @include bp-tablet-lg {
+  @include bp-desktop {
+    padding: $spacing-9 0;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 100vh;
     width: 100%;
   }
 }
@@ -19,10 +20,21 @@
 .l-split__left,
 .l-split__right {
   flex: 1;
+  height: 100%;
+
+  .p-home & {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .l-split__left {
   padding-right: $spacing-3;
+
+  @include bp-max-desktop {
+    display: none !important;
+  }
 }
 
 .l-split__right {

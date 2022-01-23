@@ -25,7 +25,7 @@
     width: rem(223px);
   }
 
-  @include bp-tablet {
+  @include bp-desktop-lg {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@
 }
 
 .c-callout__inner {
-  @include bp-max-tablet {
+  @include bp-max-desktop-lg {
     margin-bottom: $spacing-3;
   }
 }

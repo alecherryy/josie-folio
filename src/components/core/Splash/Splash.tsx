@@ -5,12 +5,12 @@ import { Fade } from "react-awesome-reveal";
 import './styles.scss';
 
 /**
- * Intermezzo component
+ * Splash component
  */
 type Props = {
   title: string,
 }
-export const Intermezzo = ({ title }: Props) => {
+export const Splash = ({ title }: Props) => {
   const elRef = useRef(null);
 
   useEffect(() => {

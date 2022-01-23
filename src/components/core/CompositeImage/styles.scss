@@ -1,0 +1,56 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Composite image
+
+.c-composite-image {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - ($spacing-6 * 2));
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  @include bp-max-desktop {
+    display: none;
+  }
+
+  @include bp-desktop {
+    height: calc(100vh - ($spacing-9 * 2));
+    margin-left: $spacing-9;
+    width: calc(50vw - $spacing-9);
+  }
+}
+
+.c-composite-image__circle-orange {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.c-composite-image__circle-waves {
+  position: absolute;
+  z-index: 3;
+}
+
+.c-composite-image__dots {
+  left: 0;
+  position: absolute;
+  top: $spacing-6;
+}
+
+.c-composite-image__half-circle {
+  bottom: $spacing-6;
+  position: absolute;
+  left: $spacing-9;
+  z-index: 4;
+}
+
+.c-composite-image__circle-grey {
+  bottom: 0;
+  position: absolute;
+  left: calc($spacing-9 * 2);
+  z-index: 2;
+}
