@@ -1,3 +1,4 @@
+import { Slide } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
 import { Link } from "../../../interfaces";
 import './styles.scss';
@@ -15,22 +16,24 @@ export const Menu = ({ modifierClasses = '', items }: Props) => {
   }
 
   return (
-    <nav className={[
-      'c-menu',
-      modifierClasses
-    ].join(' ').trim()}>
-      <ul className="c-menu__menu">
-        {items.map((item: Link, index: number) => (
-          <li className="c-menu__item" key={index}>
-            <NavLink
-              className={(navData: any) => getActiveClass(navData, index)}
-              to={item.path}
-            >
-              {item.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <Slide direction="right">
+      <nav className={[
+        'c-menu',
+        modifierClasses
+      ].join(' ').trim()}>
+        <ul className="c-menu__menu">
+          {items.map((item: Link, index: number) => (
+            <li className="c-menu__item" key={index}>
+              <NavLink
+                className={(navData: any) => getActiveClass(navData, index)}
+                to={item.path}
+              >
+                {item.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </Slide>
   )
 }
