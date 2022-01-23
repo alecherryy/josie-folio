@@ -5,11 +5,8 @@
 // Callout
 
 .c-callout {
-  align-items: center;
   background-color: $black-1;
-  display: flex;
   color: $grey-3;
-  justify-content: space-between;
   padding: $spacing-4;
   position: relative;
 
@@ -26,5 +23,17 @@
     left: calc(#{rem(223px)} / 2 * -1);
     position: absolute;
     width: rem(223px);
+  }
+
+  @include bp-tablet {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-callout__inner {
+  @include bp-max-tablet {
+    margin-bottom: $spacing-3;
   }
 }

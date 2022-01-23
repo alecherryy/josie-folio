@@ -1,0 +1,49 @@
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+
+// @file
+// Menu
+
+.c-mobile-menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-mobile-menu__btn {
+  @include button-clear();
+  color: $grey-2;
+  position: fixed;
+  right: $spacing-2;
+  top: $spacing-2;
+  z-index: 4;
+}
+
+.c-mobile-menu__menu {
+  @include list-clean();
+
+  align-items: center;
+  background-color: $black;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+}
+
+.c-mobile-menu__item {
+  padding-left: 0 !important;
+}
+
+.c-mobile-menu__link {
+  font-size: $font-size-sm;
+  color: $grey-2;
+  text-decoration: none;
+
+  &.is-active {
+    color: $white;
+  }
+}

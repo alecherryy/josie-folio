@@ -1,12 +1,12 @@
 // @file
 // Breakpoints
-$screen-mobile: rem(320px); // extra-small devices
-$screen-mobile-lg: rem(480px); // small devices
-$screen-tablet: rem(640px); // tablet
-$screen-tablet-lg: rem(880px); // large tablet
-$screen-desktop: rem(1024px); // desktop
-$screen-desktop-lg: rem(1420px); // large desktop
-$screen-widescreen: rem(1700px); // widescreen desktop. 15' and up
+$screen-mobile: 320px; // extra-small devices
+$screen-mobile-lg: 480px; // small devices
+$screen-tablet: 640px; // tablet
+$screen-tablet-lg: 880px; // large tablet
+$screen-desktop: 1024px; // desktop
+$screen-desktop-lg: 1420px; // large desktop
+$screen-widescreen: 1700px; // widescreen desktop. 15' and up
 
 
 // Progressive Enhacement - Mobile first
