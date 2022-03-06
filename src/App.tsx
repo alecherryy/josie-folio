@@ -6,6 +6,7 @@ import { Splash } from './components/core/Splash/Splash';
 import { useEffect, useState } from 'react';
 
 function App() {
+  const isFirstVisit = sessionStorage.getItem('isFirstVisit');
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -15,7 +16,7 @@ function App() {
 
   }, [setIsReady])
 
-if (!isReady) {
+if (!isReady && !isFirstVisit) {
   return <Splash title={`josie — portfolio`} />;
 }
 

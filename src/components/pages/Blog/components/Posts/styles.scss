@@ -1,0 +1,24 @@
+@import '../../../../../scss/variables';
+@import '../../../../../scss/utils';
+
+// @file
+// Content
+
+.c-posts {
+  @include list-clean();
+
+  flex-grow: 1;
+  height: 100%;
+  margin: 0 $spacing-2;
+  overflow: auto;
+
+  @include bp-tablet-lg {
+    margin: 0 $spacing-6;
+    padding-top: $spacing-6;
+    padding-left: #{$spacing-6 * 2};
+  }
+}
+
+.c-posts__item {
+  margin-bottom: $spacing-6;
+}

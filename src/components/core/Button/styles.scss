@@ -74,6 +74,39 @@
   }
 }
 
+.c-button--text {
+  background-color: transparent;
+  font-weight: 400;
+  padding: 0;
+  width: auto;
+
+  &:before,
+  &:after {
+    background-size: 5px 10px;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.c-button--text-small {
+  background-color: transparent;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  padding: 0 $spacing-6 0 0;
+  width: auto;
+
+  &:before,
+  &:after {
+    background-size: 5px 10px;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 @keyframes fade-and-slide {
   0% {
     transform: translateX(0);

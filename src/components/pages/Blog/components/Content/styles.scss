@@ -1,0 +1,25 @@
+@import '../../../../../scss/variables';
+@import '../../../../../scss/utils';
+
+// @file
+// Content
+
+.c-content {
+  color: $grey-2;
+  width: 100%;
+
+  @include bp-max-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.c-content__text {
+  margin-left: $spacing-2;
+
+  @include bp-tablet-lg {
+    margin-left: $spacing-6;
+  }
+}

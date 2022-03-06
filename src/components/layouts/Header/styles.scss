@@ -10,8 +10,14 @@
   display: flex;
   justify-content: space-between;
   left: 0;
-  padding: $spacing-3 0;
-  position: absolute;
+  padding: $spacing-3 $spacing-2 0;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9;
+
+  @include bp-tablet-lg {
+    padding-left: $spacing-6;
+    padding-right: $spacing-6;
+  }
 }

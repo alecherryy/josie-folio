@@ -19,7 +19,13 @@
   @include bp-desktop {
     height: calc(100vh - ($spacing-9 * 2));
     margin-left: $spacing-9;
-    width: calc(50vw - $spacing-9);
+    width: calc(35vw - $spacing-9);
+  }
+
+  @include bp-widescreen {
+    height: calc(100vh - ($spacing-9 * 2));
+    margin-left: $spacing-9;
+    width: calc(40vw - $spacing-9);
   }
 }
 

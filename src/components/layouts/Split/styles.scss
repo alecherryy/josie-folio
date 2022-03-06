@@ -22,7 +22,8 @@
   flex: 1;
   height: 100%;
 
-  .p-home & {
+  .p-home &,
+  .p-blog & {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -32,8 +33,10 @@
 .l-split__left {
   padding-right: $spacing-3;
 
-  @include bp-max-desktop {
-    display: none !important;
+  .p-home & {
+    @include bp-max-desktop {
+      display: none !important;
+    }
   }
 }
 

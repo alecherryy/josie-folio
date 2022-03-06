@@ -98,6 +98,11 @@
   line-height: $line-height-loose;
 }
 
+// text styles
+.u-txt-eyebrow {
+  @include eyebrow();
+}
+
 // Alignment
 .u-align-left {
   text-align: left;

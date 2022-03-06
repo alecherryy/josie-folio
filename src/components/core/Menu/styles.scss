@@ -13,11 +13,26 @@
 .c-menu__menu {
   @include list-inline();
 
-  border-bottom: 1px solid $black-1;
   margin: 0;
   padding-bottom: $spacing-2;
-  padding-right: $spacing-6;
   position: relative;
+
+  &::after {
+    background-color: $black-1;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: calc(100% + #{$spacing-2});
+  }
+
+  @include bp-tablet-lg {
+    &::after {
+      width: calc(100% + #{$spacing-6});
+    }
+  }
 }
 
 .c-menu__item {
@@ -36,5 +51,13 @@
 
   &.is-active {
     color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:hover {
+    color: $grey-3;
   }
 }

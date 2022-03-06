@@ -18,6 +18,7 @@ export const Splash = ({ title }: Props) => {
         fadeOut(elRef.current);
       }, 2000)
     }
+    sessionStorage.setItem('isFirstVisit', 'true');
   }, []);
 
   return (

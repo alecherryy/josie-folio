@@ -1,0 +1,67 @@
+@import '../../../scss/utils';
+@import '../../../scss/variables';
+
+// @file
+// Callout
+
+.c-callout {
+  background-color: $black-1;
+  color: $grey-3;
+  padding: $spacing-4 $spacing-2;
+  position: relative;
+
+  @include bp-tablet-lg {
+    padding: $spacing-6;
+  }
+
+  @include bp-desktop-lg {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-callout--left,
+.c-callout--right {
+  &::after {
+    @include svg-background(shape-1);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: rem(223px) rem(28px);
+    bottom: calc(rem(14px) * -1);
+    content: '';
+    display: block;
+    height: rem(28px);
+    position: absolute;
+    width: rem(223px);
+  }
+
+  &.c-callout--plain {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.c-callout--right {
+  &::after {
+    left: calc(#{rem(223px)} / 2 * -1);
+  }
+}
+
+.c-callout--left {
+  &::after {
+    right: calc(#{rem(223px)} / 2 * -1);
+  }
+}
+
+.c-callout__inner {
+  @include bp-max-desktop-lg {
+    margin-bottom: $spacing-3;
+  }
+}
+
+.c-callout__btn {
+  margin-left: $spacing-2;
+}

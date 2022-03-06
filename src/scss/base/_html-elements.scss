@@ -32,7 +32,7 @@ body {
   font-family: $base-font-family;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0;
   width: 100vw;
   word-wrap: break-word;
@@ -83,7 +83,7 @@ h2,
 h3,
 %h3 {
   @extend %hN;
-  font-size: $font-size-lg;
+  font-size: $font-size-h4;
 
   @include bp-tablet-lg {
     font-size: $font-size-h3;

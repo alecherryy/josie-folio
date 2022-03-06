@@ -193,3 +193,13 @@ export const convertStringToBoolean = (str: string) => {
       return false;
   }
 };
+
+/**
+ * Flatten class name array
+ */
+export const flattenClassNames = (defaultClass: string, modifierClass: string) => {
+  return [
+    defaultClass,
+    modifierClass
+  ].join(' ').trim();
+}

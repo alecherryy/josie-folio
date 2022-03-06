@@ -1,20 +1,20 @@
-import React from "react";
+import { HTMLAttributes } from "react";
 import './styles.scss';
 
 /**
  * Button component
  */
-type ButtonProps = React.HTMLProps<HTMLButtonElement>;
+type ButtonProps = HTMLAttributes<HTMLButtonElement>;
 type RequiredProps = Required<Pick<ButtonProps, 'onClick'>>;
 type Props = RequiredProps & {
   text: string,
   modifierClasses?: string
 }
-export const Button = ({ modifierClasses = '', text, onClick}: Props) => {
+export const Button = ({ modifierClasses = '', text, ...rest}: Props) => {
   return (
-    <button className={[
+    <button {...rest} className={[
       'c-button',
       modifierClasses
-    ].join(' ').trim()} onClick={onClick}>{text}</button>
+    ].join(' ').trim()}>{text}</button>
   )
 }
