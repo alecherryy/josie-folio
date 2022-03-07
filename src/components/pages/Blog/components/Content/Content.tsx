@@ -8,7 +8,7 @@ import { Callout } from "../../../../core/Callout/Callout";
 export const Content = () => {
   return (
     <div className="c-content">
-      <Fade delay={200} direction="up" cascade className="c-content__text">
+      <Fade delay={200} direction="up" cascade className="c-content__text" triggerOnce>
         <h1>blog
         </h1>
         <p className="u-mb-6">latest articles and news</p>

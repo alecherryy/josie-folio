@@ -1,5 +1,6 @@
 // interface for single blog post
-export type Post = & {
+export type Post = {
   title: string,
-  date: Date,
+  date: Date | string,
+  file?: string
 };

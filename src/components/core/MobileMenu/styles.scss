@@ -12,7 +12,9 @@
 
 .c-mobile-menu__btn {
   @include button-clear();
+
   color: $grey-2;
+  font-size: $font-size-sm;
   position: fixed;
   right: $spacing-2;
   z-index: 4;
@@ -35,11 +37,11 @@
 
 .c-mobile-menu__item {
   padding-left: 0 !important;
+  margin-bottom: $spacing-3;
 }
 
 .c-mobile-menu__link {
-  font-size: $font-size-sm;
-  color: $grey-2;
+  color: $grey-3;
   text-decoration: none;
 
   &.is-active {

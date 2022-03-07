@@ -17,9 +17,9 @@ type Props = {
 export const Callout = ({ modifierClasses = '', direction, children, action, buttonText = '' }: Props) => {
   const classes = `c-callout--${direction} ${modifierClasses}`;
   return (
-    <Slide direction={direction} delay={700} cascade>
+    <Slide direction={direction} delay={700} cascade triggerOnce>
       <div className={flattenClassNames('c-callout', classes)}>
-        <Fade direction="up" cascade>
+        <Fade direction="up" cascade triggerOnce>
           <div className="c-callout__inner">
             {children}
           </div>

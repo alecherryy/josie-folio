@@ -1,0 +1,37 @@
+@import '../../../../../scss/variables';
+@import '../../../../../scss/utils';
+
+// @file
+// Markdown file
+
+.c-markdown-file {
+  color: $grey-4;
+  margin-top: $spacing-6;
+  padding: $spacing-6 0;
+  padding-right: $spacing-2;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  @include bp-tablet-lg {
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    padding-right: $spacing-6;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.c-markdown-file__date {
+  font-size: $font-size-sm;
+  color: $grey-3;
+  margin-bottom: $spacing-3;
+}

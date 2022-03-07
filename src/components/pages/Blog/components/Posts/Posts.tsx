@@ -15,7 +15,7 @@ export const Posts = ({ posts }: Props) => {
       {posts.map((post: Post, index: number) => {
         return (
           <li key={index} className="c-posts__item">
-            <Fade direction="up" cascade delay={100 * index}>
+            <Fade direction="up" cascade delay={100 * index} triggerOnce>
               <Teaser post={post} />
             </Fade>
           </li>

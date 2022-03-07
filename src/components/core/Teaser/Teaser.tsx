@@ -9,7 +9,7 @@ type Props = {
   post: Post
 }
 export const Teaser = ({ post }: Props) => {
-  const path = post.title.toLowerCase().replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').replaceAll(' ', '-');
+  const path = post.title.toLowerCase().replaceAll(/[.,/#!$%^&*;:{}=\-_`~()]/g, '').replaceAll(' ', '-');
   const date = (new Date(post.date)).toLocaleString('en-US', {year: 'numeric', month: 'long', day: 'numeric'});
   return (
     <div className="c-teaser">
